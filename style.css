@@ -207,6 +207,12 @@ body {
     margin-bottom: 15px;
 }
 
+.work_place select {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 15px;
+}
+
 .count_items {
     padding: 30px 64px 30px 30px;
 }
