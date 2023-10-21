@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css" />
+    <title>Plan</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header_right">
+            <button class="btn_burger-service">
+                <img src="/public/menu.svg" />
+                <p>Сервисы</p>
+            </button>
+            <div class="header_uniName">
+                <img class="uniLogotype" src="/public/logo.svg" alt="logoKFU" />
+                <div class="divider"></div>
+                <p>Module Vacation</p>
+            </div>
+        </div>
+
+        <div class="header-left">
+            <div class="header_icons">
+                <img src="/public/search.svg" alt="search" />
+                <img src="/public/message.svg" alt="message" />
+                <img src="/public/geo.svg" alt="geo" />
+                <img src="/public/task.svg" alt="task" />
+                <img src="/public/docs.svg" alt="docs" />
+                <img src="/public/eye.svg" alt="eye" />
+            </div>
+            <div class="header_person">
+                <img src="/public/person.svg" alt="avatar" />
+                <div>
+                    <strong>Перельман Г.Я.</strong>
+                    <p>Гость</p>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <div class="side_bar">
+            <div class="menu">
+                <div class="menu-item">
+                    <div class="menu-item__title">
+                        <img src="/public/vacation.svg" alt="requests" />
+                        <p>Мои отпуска</p>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item__title">
+                        <img src="/public/requests.svg" alt="requests" />
+                        <p>Мои заявления</p>
+                        <div class="spisok_icon">
+                            <img src="/public/spisok.svg" />
+                        </div>
+                    </div>
+                    <div class="item_desc">
+                        <div class="under_item">
+                            <p>Заявления</p>
+                            <p>Подать заявление</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item__title active_title">
+                        <img src="/public/calend.svg" alt="requests" />
+                        <p>Планирование</p>
+                        <div class="spisok_icon">
+                            <img src="/public/spisok.svg" />
+                        </div>
+                    </div>
+                    <div class="item_desc">
+                        <div class="under_item">
+                            <p class="active_under_item">Ваш план</p>
+                            <p>Запланировать</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="plan_and_count">
+                <div class="plan">
+                    <p class="page_title">Ваш план</p>
+                    <div class="choose_year">
+                        <p>Год</p>
+                        <select class="select">
+                            <option>2023</option>
+                            <option>2022</option>
+                            <option>2021</option>
+                            <option>2020</option>
+                            <option>2019</option>
+                            <option>2018</option>
+                        </select>
+                    </div>
+                    <div class="work_place">
+                        <p>Место работы</p>
+                        <select class="select">
+                            <option>КФУ/Институт филологии и межкультурной коммуникации/Высшая школа нац...</option>
+                            <option>КФУ/Институт математики и механики им. Н.И. Лобачевского</option>
+                            <option>КФУ/Институт физики</option>
+                        </select>
+                    </div>
+                </div>
+                <diV class="count">
+                    <div class="count_items">
+                        <div class="count_item">
+                            <p>Количество неиспользованных дней <br />за все время работы:</p>
+                            <p class="days">56</p>
+                        </div>
+                        <div class="count_item">
+                            <p>На 2023 год запланировано:</p>
+                            <p class="days">28</p>
+                        </div>
+                        <div class="count_item">
+                            <p>Отгулено:</p>
+                            <p class="days">14</p>
+                        </div>
+                    </div>
+
+                </diV>
+            </div>
+            <div class="table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Номер</th>
+                            <th>Начало</th>
+                            <th>Конец</th>
+                            <th>Кол-во дней</th>
+                            <th>Статус</th>
+                            <th>Комментарий</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>12</td>
+                            <td>21.10.23</td>
+                            <td>30.10.23</td>
+                            <td>19</td>
+                            <td>На рассмотрении</td>
+                            <td></td>
+                            <td><img src="/public/table.svg" /></td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>21.10.23</td>
+                            <td>30.10.23</td>
+                            <td>5</td>
+                            <td>Отклонено</td>
+                            <td>Пересекаются даты с Валлиуллиной А.Ф.</td>
+                            <td><img src="/public/table.svg" /></td>
+                        </tr>
+                        <tr>
+                            <td>78</td>
+                            <td>21.10.23</td>
+                            <td>30.10.23</td>
+                            <td>15</td>
+                            <td>На рассмотрении</td>
+                            <td></td>
+                            <td><img src="/public/table.svg" /></td>
+                        </tr>
+                        <tr>
+                            <td>45</td>
+                            <td>21.10.23</td>
+                            <td>30.10.23</td>
+                            <td>7</td>
+                            <td>Одобрено</td>
+                            <td></td>
+                            <td><img src="/public/table.svg" /></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

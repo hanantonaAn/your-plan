@@ -1,0 +1,264 @@
+:root {
+    --color-blue: #1F5CB8;
+    --color-light_blue: #3073D7;
+    --color-gray: #444444;
+    --color-light: #F5F8FB;
+    --color-header: #65A1FA;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    font-family: PT Sans;
+}
+
+.header {
+    position: sticky;
+    font-family: Open Sans;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--color-header);
+    color: white;
+    font-size: 16px;
+    padding-left: 30px;
+    padding-right: 94px;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 103px;
+}
+
+.header_right {
+    display: flex;
+    gap: 34px;
+    align-items: center;
+}
+
+
+.btn_burger-service {
+    font-family: Open Sans;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color--blue);
+    border: solid 2px white;
+    border-radius: 20px;
+    color: white;
+    padding: 10px 18px;
+    font-size: 16px;
+    gap: 14px
+}
+
+.header_uniName {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.divider {
+    width: 0.8px;
+    height: 40px;
+    background-color: white;
+}
+
+.header_icons {
+    display: flex;
+    gap: 40px
+}
+
+.header_icons img {
+    width: 20px;
+    height: 20px;
+}
+
+.header_person {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 14px;
+}
+
+.main {
+    display: flex;
+    height: 100vh;
+}
+
+.side_bar {
+    padding-top: 70px;
+    box-shadow: 0 0 19px 0 rgba(212, 227, 241, .6);
+    position: inherit;
+    z-index: 10;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.menu-item {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: start;
+}
+
+.menu-item__title {
+    display: flex;
+    gap: 15px;
+    align-items: start;
+    padding-right: 20px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 30px;
+}
+
+.active_title {
+    background: rgba(31, 92, 184, 0.1)
+}
+
+.menu-item__title p {
+    text-wrap: nowrap;
+}
+
+.item_desc {
+    text-wrap: nowrap;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-right: 20px;
+    padding-left: 60px;
+    position: relative;
+}
+
+.spisok_icon {
+    line-height: 5px;
+    padding-top: 5px;
+    padding-left: 19px;
+}
+
+.under_item {
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    color: #444444;
+}
+
+.active_under_item {
+    font-weight: bold;
+    color: black
+}
+
+.content {
+    padding-top: 60px;
+    padding-left: 53px;
+    padding-right: 53px;
+    background-color: #F5F8FB;
+    width: 100vw;
+}
+
+.plan_and_count {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+}
+
+.plan {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.count {
+    background-color: white;
+    box-shadow: 0 0 19px 0 rgba(212, 227, 241, .6);
+    position: inherit;
+    z-index: 10;
+}
+
+.page_title {
+    font-size: 28px;
+}
+
+.choose_year {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.select {
+    padding: 6px 15px;
+    border: solid 1px #0000001A;
+
+}
+
+.work_place p {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.count_items {
+    padding: 30px 64px 30px 30px;
+}
+
+.count_item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 65px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: #00000099;
+}
+
+.days {
+    color: var(--color-blue);
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.table {
+    margin-top: 60px;
+}
+
+table {
+    border-spacing: 0 10px;
+    text-align: left;
+
+    width: 100%;
+}
+
+th {
+    color: rgba(0, 0, 0, 0.4);
+    font-size: 14px;
+    line-height: 1;
+    padding: 20px 20px 18px 20px;
+}
+
+td,
+th {
+    display: table-cell;
+}
+
+table tbody td {
+    padding: 20px 20px 18px 20px;
+}
+
+table tbody tr {
+    margin-top: 10px;
+    background: white;
+    display: table-row;
+    box-shadow: 0 0 19px 0 rgba(212, 227, 241, .6);
+    position: inherit;
+    z-index: 10;
+}
