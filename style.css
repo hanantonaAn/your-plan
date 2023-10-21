@@ -155,7 +155,6 @@ body {
 }
 
 .active_under_item {
-    font-weight: bold;
     color: black
 }
 
@@ -231,6 +230,14 @@ body {
     color: var(--color-blue);
     font-size: 20px;
     font-weight: 700;
+}
+
+.test {
+    width: 20px
+}
+
+.test1 {
+    width: 80px;
 }
 
 .table {
