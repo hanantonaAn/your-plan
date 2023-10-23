@@ -58,6 +58,7 @@ body {
 }
 
 .header_uniName {
+    font-size: 18px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -93,7 +94,7 @@ body {
 }
 
 .side_bar {
-    padding-top: 70px;
+    padding-top: 55px;
     box-shadow: 0 0 19px 0 rgba(212, 227, 241, .6);
     position: inherit;
     z-index: 10;
@@ -102,7 +103,7 @@ body {
 .menu {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 20px;
 }
 
 .menu-item {
@@ -193,6 +194,20 @@ body {
     display: flex;
     align-items: center;
     gap: 15px;
+}
+
+.dataInputField {
+    position: relative;
+}
+
+.dataInputField img {
+    position: absolute;
+    right: 14px;
+    top: 12.5px;
+}
+
+.dataInputField input {
+    width: 57px;
 }
 
 .select {

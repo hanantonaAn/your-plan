@@ -18,7 +18,7 @@
             <div class="header_uniName">
                 <img class="uniLogotype" src="/public/logo.svg" alt="logoKFU" />
                 <div class="divider"></div>
-                <p>Module Vacation</p>
+                <p>Модуль отпуск</p>
             </div>
         </div>
 
@@ -87,14 +87,11 @@
                     <p class="page_title">Ваш план</p>
                     <div class="choose_year">
                         <p>Год</p>
-                        <select class="select">
-                            <option>2023</option>
-                            <option>2022</option>
-                            <option>2021</option>
-                            <option>2020</option>
-                            <option>2019</option>
-                            <option>2018</option>
-                        </select>
+                        <div class="dataInputField">
+                            <input class="select" type="text" id="dataInput" placeholder="год" value="2023"
+                                onchange="setData()">
+                            <img src="/public/dateSelectSvg.svg" />
+                        </div>
                     </div>
                     <div class="work_place">
                         <p>Место работы</p>
