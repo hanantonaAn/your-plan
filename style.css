@@ -17,6 +17,7 @@ body {
 }
 
 .header {
+    width: 100%;
     position: sticky;
     font-family: Open Sans;
     height: 80px;
@@ -161,6 +162,7 @@ body {
 }
 
 .content {
+    overflow-x: hidden;
     padding-top: 60px;
     padding-left: 53px;
     padding-right: 53px;
@@ -172,6 +174,7 @@ body {
     display: flex;
     align-items: start;
     justify-content: space-between;
+    gap: 20px;
 }
 
 .plan {
@@ -212,6 +215,7 @@ body {
 }
 
 .select {
+    width: 100%;
     padding: 6px 15px;
     border: solid 1px #0000001A;
     border-radius: 5px;
