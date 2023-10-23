@@ -191,6 +191,7 @@ body {
 }
 
 .count {
+    min-width: 408px;
     background-color: white;
     box-shadow: 0 0 19px 0 rgba(212, 227, 241, .6);
     position: inherit;
@@ -217,15 +218,23 @@ body {
     top: 12.5px;
 }
 
-.dataInputField input {
-    width: 57px;
-}
-
 .select {
+    font-size: 16px;
+    font-family: PT Sans;
     width: 100%;
+    min-width: 400px;
     padding: 6px 15px;
     border: solid 1px #0000001A;
     border-radius: 5px;
+}
+
+.dataInputField_input {
+    font-size: 16px;
+    font-family: PT Sans;
+    padding: 6px 15px;
+    border: solid 1px #0000001A;
+    border-radius: 5px;
+    width: 57px;
 }
 
 .work_place p {
@@ -240,7 +249,7 @@ body {
 }
 
 .count_items {
-    padding: 30px 64px 30px 30px;
+    padding: 30px 64px 16px 30px;
 }
 
 .count_item {
