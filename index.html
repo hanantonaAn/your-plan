@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css" />
+    <script src="chart_logic.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans&display=swap" rel="stylesheet">
@@ -22,18 +23,29 @@
                 <div class="header_uniName">
                     <img class="uniLogotype" src="/public/logo.svg" alt="logoKFU" />
                     <div class="divider"></div>
-                    <p>Модуль отпуск</p>
+                    <p>Модуль Отпуск</p>
                 </div>
             </div>
-
             <div class="header-left">
                 <div class="header_icons">
-                    <img src="/public/search.svg" alt="search" />
-                    <img src="/public/message.svg" alt="message" />
-                    <img src="/public/geo.svg" alt="geo" />
-                    <img src="/public/task.svg" alt="task" />
-                    <img src="/public/docs.svg" alt="docs" />
-                    <img src="/public/eye.svg" alt="eye" />
+                    <div class="header_icon_container">
+                        <img src="/public/search.svg" alt="search" />
+                    </div>
+                    <div class="header_icon_container">
+                        <img src="/public/message.svg" alt="message" />
+                    </div>
+                    <div class="header_icon_container">
+                        <img src="/public/geo.svg" alt="geo" />
+                    </div>
+                    <div class="header_icon_container">
+                        <img src="/public/task.svg" alt="task" />
+                    </div>
+                    <div class="header_icon_container">
+                        <img src="/public/docs.svg" alt="docs" />
+                    </div>
+                    <div class="header_icon_container">
+                        <img src="/public/eye.svg" alt="eye" />
+                    </div>
                 </div>
                 <div class="header_person">
                     <img src="/public/person.svg" alt="avatar" />
@@ -93,19 +105,68 @@
                     <p class="page_title">Ваш план</p>
                     <div class="choose_year">
                         <p>Год</p>
-                        <div class="dataInputField">
-                            <input class="dataInputField_input" type="text" id="dataInput" placeholder="год"
-                                value="2023" onchange="setData()">
-                            <img src="/public/dateSelectSvg.svg" />
+                        <div class="width-68 mobile-width-88 year-select">
+                            <div id="selectedYear" class="main-year-select" data-selected-position=""
+                                data-selected-id="" data-department-planning="" onclick="showAllYears('yearSelect')"
+                                style="background-image: url('/public/down_arrow.svg')">год</div>
+                            <div id="yearSelect" class=" " style="display: none;">
+                                <div class="year-select__activeOption">
+                                    <div onclick="updateSelectedValueYear(1)" class="year-select__option 4" id="1">
+                                        2023</div>
+                                </div>
+                                <div class="year-select__activeOption">
+                                    <div onclick="updateSelectedValueYear(2)" class="year-select__option 6" id="2">
+                                        2022</div>
+                                </div>
+                                <div class="year-select__activeOption">
+                                    <div onclick="updateSelectedValueYear(3)" class="year-select__option 15" id="3">
+                                        2021</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="work_place">
                         <p>Место работы</p>
-                        <select class="select">
-                            <option>КФУ/Институт филологии и межкультурной коммуникации/Высшая школа нац...</option>
-                            <option>КФУ/Институт математики и механики им. Н.И. Лобачевского</option>
-                            <option>КФУ/Институт физики</option>
-                        </select>
+                        <div class="width-68 mobile-width-88 department-select">
+                            <div id="selectedDepartment" class="main-department-select" data-selected-position=""
+                                data-selected-id="" data-department-planning=""
+                                onclick="showAllDepartmentOptions('deptSelect')"
+                                style="background-image: url('/public/down_arrow.svg')">Выберите
+                                из списка</div>
+                            <div id="deptSelect" class=" " style="display: none;">
+                                <div class="department-select__activeOption">
+                                    <div onclick="updateSelectedValue(4)" class="department-select__option 4" id="4">
+                                        Центр
+                                        разработки ПО</div>
+                                </div>
+                                <div class="department-select__activeOption">
+                                    <div onclick="updateSelectedValue(6)" class="department-select__option 6" id="6">
+                                        Департамент информатизации и связи</div>
+                                </div>
+                                <div class="department-select__activeOption">
+                                    <div onclick="updateSelectedValue(15)" class="department-select__option 15" id="15">
+                                        Отдел аналитики и проектирования информационных систем</div>
+                                </div>
+                                <div class="department-select__activeOption">
+                                    <div onclick="updateSelectedValue(9)" class="department-select__option 9" id="9">
+                                        Отдел
+                                        разработки и технического сопровождения интернет-портала КФУ</div>
+                                </div>
+                                <div class="department-select__activeOption">
+                                    <div onclick="updateSelectedValue(5)" class="department-select__option 5" id="5">
+                                        Отдел
+                                        разработки информационных систем</div>
+                                </div>
+                                <div class="department-select__activeOption">
+                                    <div onclick="updateSelectedValue(16)" class="department-select__option 16" id="16">
+                                        Отдел тестирования программного обеспечения</div>
+                                </div>
+                                <div class="department-select__activeOption">
+                                    <div onclick="updateSelectedValue(10)" class="department-select__option 10" id="10">
+                                        Центр сопровождения ИТ-инфраструктуры</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <diV class="count">
@@ -123,15 +184,14 @@
                             <p class="days">14</p>
                         </div>
                     </div>
-
                 </diV>
             </div>
             <div class="table">
                 <table>
                     <thead>
                         <tr>
-                            <th class="test1">Номер</th>
-                            <th class="test">Начало</th>
+                            <th class="table-column-number">Номер</th>
+                            <th class="table-column-data">Начало</th>
                             <th>Конец</th>
                             <th>Кол-во дней</th>
                             <th>Статус</th>
